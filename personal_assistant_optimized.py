@@ -95,7 +95,7 @@ class PersonalAssistant:
         # Initialize LLM
         try:
             self.llm = ChatGoogleGenerativeAI(
-                model="gemini-1.5-flash",
+                model="models/gemini-2.5-flash",
                 google_api_key=self.config.GOOGLE_API_KEY,
                 temperature=0.1
             )
