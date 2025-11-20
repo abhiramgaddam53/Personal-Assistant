@@ -101,18 +101,18 @@ def init_database(db_manager: DatabaseManager):
                     query TEXT,
                     context TEXT,
                     response TEXT,
-                    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-                    INDEX idx_user_created (user_id, created_at)
+                    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
                 );
+                CREATE INDEX IF NOT EXISTS idx_chat_user_created ON chat_history (user_id, created_at);
                 
                 CREATE TABLE IF NOT EXISTS general_chat_history (
                     id SERIAL PRIMARY KEY,
                     user_id TEXT,
                     query TEXT,
                     response TEXT,
-                    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-                    INDEX idx_user_created (user_id, created_at)
+                    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
                 );
+                CREATE INDEX IF NOT EXISTS idx_general_user_created ON general_chat_history (user_id, created_at);
                 
                 CREATE TABLE IF NOT EXISTS tasks (
                     id SERIAL PRIMARY KEY,
@@ -121,9 +121,9 @@ def init_database(db_manager: DatabaseManager):
                     due_date TIMESTAMP,
                     status TEXT DEFAULT 'pending',
                     priority TEXT DEFAULT 'medium',
-                    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-                    INDEX idx_user_status (user_id, status)
+                    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
                 );
+                CREATE INDEX IF NOT EXISTS idx_tasks_user_status ON tasks (user_id, status);
                 
                 CREATE TABLE IF NOT EXISTS user_profiles (
                     user_id TEXT PRIMARY KEY,
