@@ -1,0 +1,17 @@
+psycopg2-binary 
+python-dotenv 
+apscheduler 
+google-api-python-client 
+google-auth 
+google-auth-oauthlib 
+google-auth-httplib2 
+requests 
+langchain 
+langchain-google-genai 
+langchain-community 
+langchain-core 
+langchain-huggingface 
+faiss-cpu 
+sentence-transformers 
+dateparser 
+ 
