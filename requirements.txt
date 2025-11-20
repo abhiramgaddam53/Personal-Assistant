@@ -1,0 +1,26 @@
+# Core dependencies
+python-dotenv>=1.0.0
+psycopg2-binary>=2.9.9
+langchain>=0.1.0
+langchain-google-genai>=0.0.11
+langchain-community>=0.0.38
+langchain-core>=0.1.52
+langchain-huggingface>=0.0.1
+
+# Google APIs
+google-api-python-client>=2.100.0
+google-auth>=2.23.0
+google-auth-oauthlib>=1.1.0
+google-auth-httplib2>=0.1.1
+
+# AI/ML
+faiss-cpu>=1.7.4
+sentence-transformers>=2.2.2
+
+# Scheduling and utilities
+APScheduler>=3.10.4
+requests>=2.31.0
+dateparser>=1.2.0
+
+# Email
+# Note: imaplib and smtplib are built-in Python modules
